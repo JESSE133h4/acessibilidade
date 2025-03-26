@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprenda sobre acessibilidade na web e como melhorar a experiência do usuário.">
+  <title>Acessibilidade na Web</title>
+  <style>
+    /* Estilos básicos para acessibilidade */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:focus,
+    nav ul li a:hover {
+      color: #f1c40f;
+      outline: 2px solid #f1c40f;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #2c3e50;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background-color: #f1c40f;
+      color: #2c3e50;
+      padding: 0.5rem 1rem;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Contraste alto para elementos interativos */
+    button,
+    input[type="button"] {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover,
+    button:focus {
+      background-color: #2980b9;
+      outline: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Link para pular diretamente ao conteúdo principal -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header>
+    <h1>Acessibilidade na Web</h1>
+  </header>
+
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="#o-que-e">O que é?</a></li>
+      <li><a href="#principios">Princípios</a></li>
+      <li><a href="#dicas">Dicas</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section id="o-que-e">
+      <h2>O que é Acessibilidade na Web?</h2>
+      <p>Acessibilidade na web refere-se à prática de garantir que todos os usuários, independentemente de suas habilidades ou deficiências, possam acessar e interagir com sites e aplicativos da web.</p>
+    </section>
+
+    <section id="principios">
+      <h2>Princípios da Acessibilidade</h2>
+      <p>Os princípios fundamentais da acessibilidade são:</p>
+      <ul>
+        <li><strong>Perceptível:</strong> Informações e componentes devem ser apresentados de forma que os usuários possam perceber.</li>
+        <li><strong>Operável:</strong> Interfaces devem ser utilizáveis por todos.</li>
+        <li><strong>Compreensível:</strong> Informações e operação devem ser claras e compreensíveis.</li>
+        <li><strong>Robusto:</strong> Conteúdo deve ser interpretável por uma ampla variedade de tecnologias assistivas.</li>
+      </ul>
+    </section>
+
+    <section id="dicas">
+      <h2>Dicas para Melhorar a Acessibilidade</h2>
+      <p>Aqui estão algumas dicas práticas:</p>
+      <ol>
+        <li>Use cores com contraste suficiente.</li>
+        <li>Forneça alternativas em texto para imagens (atributo <code>alt</code>).</li>
+        <li>Torne os formulários acessíveis com rótulos claros.</li>
+        <li>Garanta que o site seja navegável por teclado.</li>
+        <li>Evite conteúdos piscantes ou que causem convulsões.</li>
+      </ol>
+    </section>
+
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <p>Se tiver dúvidas ou sugestões, entre em contato conosco:</p>
+      <form action="#" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required aria-required="true">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required aria-required="true">
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required aria-required="true"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Acessibilidade na Web. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Script simples para foco no skip link
+    document.querySelector('.skip-link').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector('#main-content').focus();
+    });
+  </script>
+</body>
+</html>
